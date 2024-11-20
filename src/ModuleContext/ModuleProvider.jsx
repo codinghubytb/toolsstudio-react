@@ -6,9 +6,9 @@ const ModuleContext = createContext();
 // Fournisseur pour les modules
 export const ModuleProvider = ({ children }) => {
   const [modules, setModules] = useState([]);
-
+  const apiUrl = import.meta.env.VITE_APIDATA;
   useEffect(() => {
-    fetch('https://apidata.codinghub.cloud/api/collection?database=toolsstudio&collection=module&Enabled=true') // Remplace par ton URL d'API
+    fetch(`${apiUrl}/collection?database=toolsstudio&collection=module&Enabled=true`) // Remplace par ton URL d'API
       .then(response => response.json())
       .then(data => {
         setModules(data);  // On stocke les données dans le state

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { configDotenv } from 'dotenv'; // Load environment variables from .env
 
 import PositionedComponent from "../../Library/PositionedComponent";
 import WrapperComponent from "../../Library/WrapperComponent";
@@ -128,7 +129,8 @@ const TranslateConverterPage = () => {
   };
 
   const translate = () => {
-    fetch(`https://apimodule.codinghub.cloud/tools/translate?textTo=${input}&toLang=${to}&fromLang=${from}`)
+    const apiUrl = import.meta.env.VITE_APIMODULE;
+    fetch(`${apiUrl}/tools/translate?textTo=${input}&toLang=${to}&fromLang=${from}`)
       .then(response => response.json())
       .then(data => {
         setData(data);

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { configDotenv } from 'dotenv'; // Load environment variables from .env
 
 import PositionedComponent from "../../Library/PositionedComponent";
 import WrapperComponent from "../../Library/WrapperComponent";
@@ -20,7 +21,8 @@ const QrcodeGeneratorPage = () => {
   const generate = () => {
     setIsGenerate(true);
 
-    fetch('https://apimodule.codinghub.cloud/tools/generateQrcode?text=url')
+    const apiUrl = import.meta.env.VITE_APIMODULE;
+    fetch(`${apiUrl}/tools/generateQrcode?text=url`)
       .then(response => response.json())
       .then(data => {
         setData(data);

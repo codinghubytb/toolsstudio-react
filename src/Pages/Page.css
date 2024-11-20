@@ -1,6 +1,3 @@
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-evenly;
-  }
+.tools-page h1{
+  text-align: center;
+}

@@ -1,0 +1,48 @@
+.ch-cards-inner {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s;
+}
+
+.ch-cards-inner:hover {
+    box-shadow: 0 5px 20px rgba(1, 45, 128, 0.5);
+}
+
+.ch-cards-inner .ch-element-icon img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.ch-element-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ch-cards-inner .ch-cards-element .ch-element-body {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.ch-indication {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ch-element-body {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
