@@ -1,0 +1,56 @@
+.ch-position {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative; 
+  }
+  
+  /* Positioning styles */
+  .position-top-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .position-top-center {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .position-top-right {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .position-center-left {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .position-center-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .position-center-right {
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .position-bottom-left {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .position-bottom-center {
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .position-bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  /*.position-full {
+  }*/
+  

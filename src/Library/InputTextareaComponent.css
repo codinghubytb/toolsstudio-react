@@ -1,0 +1,48 @@
+/* Style général pour l'élément de conteneur */
+.ch-textarea-input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Style de la textarea */
+  .ch-textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  /* Placeholder de la textarea */
+  .ch-textarea::placeholder {
+    color: #b7b6b6;
+    font-size: 16px;
+  }
+  
+  /* Style de la scrollbar si elle est présente */
+  .ch-textarea::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .ch-textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .ch-textarea::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  .ch-textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

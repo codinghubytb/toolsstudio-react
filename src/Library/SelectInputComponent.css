@@ -1,0 +1,20 @@
+.ch-text-select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .ch-text-select .ch-select {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .ch-text-select .ch-select::placeholder {
+    color: #b7b6b6;
+  }
+  

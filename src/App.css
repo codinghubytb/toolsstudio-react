@@ -1,0 +1,40 @@
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+/* Conteneur global */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Mise en page principale */
+.main-layout {
+  overflow: auto;
+  display: flex;
+  height: calc(100vh); /* Ajuster pour la navbar */
+}
+
+/* Contenu principal */
+.content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fbfbfb;
+  overflow-y: auto;
+}
+
+/* Mode sombre */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .content {
+  background-color: #555;
+}

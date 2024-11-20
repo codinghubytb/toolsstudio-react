@@ -1,0 +1,19 @@
+.ch-btn {
+    border: 1px solid;
+    padding: 14px;
+    outline: none;
+    cursor: default;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ch-btn.active,
+  .ch-btn.stopActive {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  

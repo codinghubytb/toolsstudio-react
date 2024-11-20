@@ -1,0 +1,41 @@
+.ch-number-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    width: 100%;
+    background: #fff;
+}
+
+.ch-number-input .ch-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: inherit; /* Ensures it adapts to the textColor prop */
+}
+
+.ch-number-input .ch-input::placeholder {
+    color: #b7b6b6;
+}
+
+.ch-number-input .ch-input:disabled {
+    background: #f5f5f5; /* Light gray background for disabled state */
+    color: #a8a8a8; /* Gray text for disabled state */
+    cursor: not-allowed;
+}
+
+.ch-number-input .ch-input::-webkit-scrollbar {
+    width: 4px;
+}
+
+.ch-number-input .ch-input::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.ch-number-input .ch-input::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 8px;
+}
