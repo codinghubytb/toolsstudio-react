@@ -55,8 +55,8 @@ const InputNumberComponent = ({
 };
 
 InputNumberComponent.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  onValueChange: PropTypes.func.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onValueChange: PropTypes.func,
   min: PropTypes.number,
   max: PropTypes.number,
   placeholder: PropTypes.string,
@@ -64,16 +64,6 @@ InputNumberComponent.propTypes = {
   disabled: PropTypes.bool,
   updateOnInput: PropTypes.bool,
   additionalAttributes: PropTypes.object,
-};
-
-InputNumberComponent.defaultProps = {
-  min: Number.MIN_SAFE_INTEGER,
-  max: Number.MAX_SAFE_INTEGER,
-  placeholder: "",
-  textColor: "#000",
-  disabled: false,
-  updateOnInput: true,
-  additionalAttributes: {},
 };
 
 export default InputNumberComponent;

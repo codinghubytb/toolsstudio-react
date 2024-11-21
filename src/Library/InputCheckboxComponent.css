@@ -1,0 +1,11 @@
+.ch-checkbox-input {
+    height: 16px;
+    width: 16px;
+    cursor: default;
+  }
+  
+  .ch-checkbox-label {
+    cursor: default;
+    padding-left: 0.63rem;
+  }
+  

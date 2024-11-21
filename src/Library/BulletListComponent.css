@@ -1,0 +1,7 @@
+.ch-checkbox-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Label = ({ text = "", textColor = "#000", clickEvent }) => {
+const Label = ({ text = "", textColor = "#000", clickEvent, id }) => {
   const handleClick = () => {
     if (clickEvent) {
       clickEvent();
@@ -8,7 +8,7 @@ const Label = ({ text = "", textColor = "#000", clickEvent }) => {
   };
 
   return (
-    <label onClick={handleClick} style={{ color: textColor }}>
+    <label htmlFor={id} onClick={handleClick} style={{ color: textColor }}>
       {text}
     </label>
   );

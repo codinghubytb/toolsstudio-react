@@ -1,0 +1,13 @@
+.ch-bullet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+  }
+  
+  @media only screen and (max-width: 667px) {
+    .ch-bullet {
+      width: 100%;
+    }
+  }
+  

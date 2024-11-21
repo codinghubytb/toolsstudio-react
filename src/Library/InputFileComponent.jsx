@@ -1,38 +1,58 @@
 import React, { useState } from "react";
-import "./InputFileComponent.css"
+import "./InputFileComponent.css";
 
-const InputFileComponent = ({ acceptedFileTypes = "image/*", textColor = "#000", onFileChange }) => {
-    const [isFileSelected, setIsFileSelected] = useState(false);
+const InputFileComponent = ({
+  acceptedFileTypes = "image/*, text/*",
+  maxSize = 1024 * 100, 
+  textColor = "#000",
+  onFileChange,
+  id,
+  display = "block",
+}) => {
+  const [error, setError] = useState("");
+  const [isFileSelected, setIsFileSelected] = useState(false);
 
-    const handleFileUpload = (event) => {
-        const files = event.target.files;
-        setIsFileSelected(files.length > 0);
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0]; // Récupérer le fichier
+    setError(""); // Réinitialiser l'erreur
 
-        // Appeler la fonction de rappel lorsque les fichiers sont sélectionnés
-        if (onFileChange) {
-            onFileChange(files);
-        }
-    };
+    if (!file) {
+      setError("No file selected.");
+      return;
+    }
 
-    return (
-        <label
-            htmlFor="file-upload"
-            className={`ch-drop-container ${isFileSelected ? "ch-file-selected" : ""}`}
-            id="dropcontainer"
-        >
-            <span className="ch-drop-title" style={{ color: textColor }}>
-                Drop files here
-            </span>
-            or
-            <input
-                type="file"
-                id="file-upload"
-                className="ch-drop-input"
-                accept={acceptedFileTypes}
-                onChange={handleFileUpload}
-            />
-        </label>
-    );
+    if (file.size > maxSize) {
+      setError("File size exceeds 100 KB. Please select a smaller file.");
+      return;
+    }
+
+    setIsFileSelected(true);
+
+    // Appeler la fonction de rappel avec le fichier sélectionné
+    if (onFileChange) {
+      onFileChange(file);
+    }
+  };
+
+  return (
+    <label
+      htmlFor={id}
+      style={{display: display}}
+      className={`ch-drop-container ${isFileSelected ? "ch-file-selected" : ""}`}
+    >
+      <span className="ch-drop-title" style={{ color: textColor }}>
+        Drop files here or click to select
+      </span>
+      <input
+        type="file"
+        id={id}
+        className="ch-drop-input"
+        accept={acceptedFileTypes}
+        onChange={handleFileUpload}
+      />
+      {error && <p style={{ color: "red", fontSize: "12px" }}>{error}</p>}
+    </label>
+  );
 };
 
 export default InputFileComponent;

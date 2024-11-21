@@ -20,6 +20,14 @@ const UrlConverterPage = React.lazy(() => import('./Pages/DeveloperTools/UrlConv
 const TranslateConverterPage = React.lazy(() => import('./Pages/Tools/TranslateConverterPage'));
 const MorseConverterPage = React.lazy(() => import('./Pages/Tools/MorseConverterPage'));
 const HashGeneratorPage = React.lazy(() => import('./Pages/DeveloperTools/HashGeneratorPage'));
+const RegexGeneratorPage = React.lazy(() => import('./Pages/DeveloperTools/RegexGeneratorPage'));
+const RegexAnalyzerPage = React.lazy(() => import('./Pages/DeveloperTools/RegexAnalyzerPage'));
+const JsonmockGeneratorPage = React.lazy(() => import('./Pages/DeveloperTools/JsonmockGeneratorPage'));
+const XmlToJsonPage = React.lazy(() => import('./Pages/DeveloperTools/XmlToJsonPage'));
+const JsonToCsvPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToCsvPage'));
+const CsvToJsonPage = React.lazy(() => import('./Pages/DeveloperTools/CsvToJsonPage'));
+const JsonToXmlPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToXmlPage'));
+const MinifierPage = React.lazy(() => import('./Pages/DeveloperTools/MinifierPage'));
 const PasswordGeneratorPage = React.lazy(() => import('./Pages/Tools/PasswordGeneratorPage'));
 
 function App() {
@@ -47,6 +55,14 @@ function App() {
     { path: "/tools-for-developer/url-encoder-decoder", element: <UrlConverterPage /> },
     { path: "/tools-for-developer/uuidgenerator", element: <UuidGeneratorPage /> },
     { path: "/tools-for-developer/jsonvalidator", element: <JsonValidatorPage /> },
+    { path: "/tools-for-developer/regexgenerator", element: <RegexGeneratorPage /> },
+    { path: "/tools-for-developer/regexanalyzer", element: <RegexAnalyzerPage /> },
+    { path: "/tools-for-developer/jsonmockgenerator", element: <JsonmockGeneratorPage /> },
+    { path: "/tools-for-developer/minifier", element: <MinifierPage /> },
+    { path: "/tools-for-developer/xmltojson", element: <XmlToJsonPage /> },
+    { path: "/tools-for-developer/jsontoxml", element: <JsonToXmlPage /> },
+    { path: "/tools-for-developer/csvtojson", element: <CsvToJsonPage /> },
+    { path: "/tools-for-developer/jsontocsv", element: <JsonToCsvPage /> },
     { path: "/image-transform", element: <ToolsPage category="image-transform" /> },
   ];
 
