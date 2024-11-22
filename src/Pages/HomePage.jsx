@@ -43,7 +43,6 @@ const HomePage = () => {
 
   return (
     <div className="tools-page">
-      <SpacerComponent />
       <h1>Bienvenue ({filteredModules.length})</h1>
       <SpacerComponent numberSpace={2} />
 

@@ -24,16 +24,8 @@
 .content {
   flex: 1;
   padding: 1rem;
-  background-color: #fbfbfb;
+  background-color: var(--body-color);
+  color: var(--text-color);
   overflow-y: auto;
-}
-
-/* Mode sombre */
-body.dark-mode {
-  background-color: #333;
-  color: white;
-}
-
-body.dark-mode .content {
-  background-color: #555;
+  z-index: 999;
 }

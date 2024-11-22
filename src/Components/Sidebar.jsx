@@ -8,15 +8,29 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     toggleSidebar(false);
   }
 
-  return (
-    <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-      <ul>
-        <li onClick={closeSidebar}><Link to="/" >Home</Link></li>
-        <li><Link to="/tools" onClick={closeSidebar}>Tools</Link></li>
-        <li><Link to="/tools-for-developer" onClick={closeSidebar}>Tools For Developer</Link></li>
-        <li><Link to="/image-transform" onClick={closeSidebar}>Image Transform</Link></li>
-      </ul>
+  return (    
+    <aside className={`sidebar ${isOpen ? "open" : "close"}`}>
+
+      <div className="menu-bar">
+          <div className="menu">
+              <ul className="menu-links">
+                  <li className="nav-link">
+                      <Link to="/" onClick={closeSidebar}>
+                          <i className='bx bx-home icon'></i>
+                          <span className="text nav-text">Home</span>
+                      </Link>
+                  </li>
+                  <li className="nav-link">
+                      <Link to=".." onClick={closeSidebar}>
+                          <i className='bx bx-log-out icon'></i>
+                          <span className="text nav-text">Logout</span>
+                      </Link>
+                  </li>
+              </ul>
+          </div>
+      </div>
     </aside>
+
   );
 };
 

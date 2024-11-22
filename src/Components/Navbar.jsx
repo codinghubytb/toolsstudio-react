@@ -6,20 +6,16 @@ const Navbar = ({ toggleSidebar }) => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle("dark-mode", !darkMode);
+    document.body.classList.toggle("dark", !darkMode);
   };
 
   return (
     <nav className="navbar">
       <div className="container-logo">
-        <button className="toggle-btn" onClick={toggleSidebar}>
-          ☰
-        </button>
-        <div className="logo">ToolsStudio</div>
+          <i className='bx bx-menu icon' onClick={toggleSidebar}></i>
+        <div className="logo"  onClick={toggleSidebar}>ToolsStudio</div>
       </div>
-      <button className="toggle-btn" onClick={toggleDarkMode}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+      <i className='bx bx-moon icon' onClick={toggleDarkMode}></i>
     </nav>
   );
 };

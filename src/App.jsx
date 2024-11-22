@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar";
 import Sidebar from "./Components/Sidebar";
-import ToolsPage from "./Pages/ToolsPage";
 import HomePage from "./Pages/HomePage";
 
 // Lazy imports for individual tools (optimizes performance)
@@ -28,10 +27,12 @@ const JsonToCsvPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToCsvP
 const CsvToJsonPage = React.lazy(() => import('./Pages/DeveloperTools/CsvToJsonPage'));
 const JsonToXmlPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToXmlPage'));
 const MinifierPage = React.lazy(() => import('./Pages/DeveloperTools/MinifierPage'));
+const JsonToCSharpPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToCSharpPage'));
+const CodeBeautifierPage = React.lazy(() => import('./Pages/DeveloperTools/CodeBeautifierPage'));
 const PasswordGeneratorPage = React.lazy(() => import('./Pages/Tools/PasswordGeneratorPage'));
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -39,7 +40,6 @@ function App() {
 
   const routes = [
     { path: "/", element: <HomePage /> },
-    { path: "/tools", element: <ToolsPage category="tools" /> },
     { path: "/tools/chronometer", element: <StopwatchPage /> },
     { path: "/tools/numbergenerator", element: <NumberGeneratorPage /> },
     { path: "/tools/qrcodegenerator", element: <QrcodeGeneratorPage /> },
@@ -49,7 +49,6 @@ function App() {
     { path: "/tools/translatelanguage", element: <TranslateConverterPage /> },
     { path: "/tools/gradientcolorgenerator", element: <GradientcolorGeneratorPage /> },
     { path: "/tools/passwordgenerator", element: <PasswordGeneratorPage /> },
-    { path: "/tools-for-developer", element: <ToolsPage category="tools-for-developer" /> },
     { path: "/tools-for-developer/base64converter", element: <Base64ConverterPage /> },
     { path: "/tools-for-developer/hashgenerator", element: <HashGeneratorPage /> },
     { path: "/tools-for-developer/url-encoder-decoder", element: <UrlConverterPage /> },
@@ -62,8 +61,9 @@ function App() {
     { path: "/tools-for-developer/xmltojson", element: <XmlToJsonPage /> },
     { path: "/tools-for-developer/jsontoxml", element: <JsonToXmlPage /> },
     { path: "/tools-for-developer/csvtojson", element: <CsvToJsonPage /> },
+    { path: "/tools-for-developer/jsontocsharp", element: <JsonToCSharpPage /> },
     { path: "/tools-for-developer/jsontocsv", element: <JsonToCsvPage /> },
-    { path: "/image-transform", element: <ToolsPage category="image-transform" /> },
+    { path: "/tools-for-developer/codebeautifier", element: <CodeBeautifierPage /> }
   ];
 
   return (
