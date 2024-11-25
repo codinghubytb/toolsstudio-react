@@ -15,13 +15,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <div className="menu">
               <ul className="menu-links">
                   <li className="nav-link">
-                      <Link to="/" onClick={closeSidebar}>
+                      <Link to="/" >
                           <i className='bx bx-home icon'></i>
                           <span className="text nav-text">Home</span>
                       </Link>
                   </li>
                   <li className="nav-link">
-                      <Link to=".." onClick={closeSidebar}>
+                      <Link to=".." >
                           <i className='bx bx-log-out icon'></i>
                           <span className="text nav-text">Logout</span>
                       </Link>

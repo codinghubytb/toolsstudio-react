@@ -18,6 +18,7 @@ const Base64ConverterPage = React.lazy(() => import('./Pages/DeveloperTools/Base
 const UrlConverterPage = React.lazy(() => import('./Pages/DeveloperTools/UrlConverterPage'));
 const TranslateConverterPage = React.lazy(() => import('./Pages/Tools/TranslateConverterPage'));
 const MorseConverterPage = React.lazy(() => import('./Pages/Tools/MorseConverterPage'));
+const UnitConverterPage = React.lazy(() => import('./Pages/Tools/UnitConverterPage'));
 const HashGeneratorPage = React.lazy(() => import('./Pages/DeveloperTools/HashGeneratorPage'));
 const RegexGeneratorPage = React.lazy(() => import('./Pages/DeveloperTools/RegexGeneratorPage'));
 const RegexAnalyzerPage = React.lazy(() => import('./Pages/DeveloperTools/RegexAnalyzerPage'));
@@ -30,9 +31,16 @@ const MinifierPage = React.lazy(() => import('./Pages/DeveloperTools/MinifierPag
 const JsonToCSharpPage = React.lazy(() => import('./Pages/DeveloperTools/JsonToCSharpPage'));
 const CodeBeautifierPage = React.lazy(() => import('./Pages/DeveloperTools/CodeBeautifierPage'));
 const PasswordGeneratorPage = React.lazy(() => import('./Pages/Tools/PasswordGeneratorPage'));
+const RotateImagePage = React.lazy(() => import('./Pages/ImageTools/RotateImagePage'));
+const CompressorImagePage = React.lazy(() => import('./Pages/ImageTools/CompressorImagePage'));
+const FilterImagePage = React.lazy(() => import('./Pages/ImageTools/FilterImagePage'));
+const ConvertFromJpgPage = React.lazy(() => import('./Pages/ImageTools/ConvertFromJpgPage'));
+const ConvertToJpgPage = React.lazy(() => import('./Pages/ImageTools/ConvertToJpgPage'));
+const ResizeImagePage = React.lazy(() => import('./Pages/ImageTools/ResizeImagePage'));
+const CropperImagePage = React.lazy(() => import('./Pages/ImageTools/CropperImagePage'));
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -48,7 +56,8 @@ function App() {
     { path: "/tools/morseconverter", element: <MorseConverterPage /> },
     { path: "/tools/translatelanguage", element: <TranslateConverterPage /> },
     { path: "/tools/gradientcolorgenerator", element: <GradientcolorGeneratorPage /> },
-    { path: "/tools/passwordgenerator", element: <PasswordGeneratorPage /> },
+    { path: "/tools/passwordgenerator", element: <PasswordGeneratorPage /> },,
+    { path: "/tools/unitconverter", element: <UnitConverterPage /> },
     { path: "/tools-for-developer/base64converter", element: <Base64ConverterPage /> },
     { path: "/tools-for-developer/hashgenerator", element: <HashGeneratorPage /> },
     { path: "/tools-for-developer/url-encoder-decoder", element: <UrlConverterPage /> },
@@ -63,7 +72,14 @@ function App() {
     { path: "/tools-for-developer/csvtojson", element: <CsvToJsonPage /> },
     { path: "/tools-for-developer/jsontocsharp", element: <JsonToCSharpPage /> },
     { path: "/tools-for-developer/jsontocsv", element: <JsonToCsvPage /> },
-    { path: "/tools-for-developer/codebeautifier", element: <CodeBeautifierPage /> }
+    { path: "/tools-for-developer/codebeautifier", element: <CodeBeautifierPage /> },
+    { path: "/image-transform/compressorimage", element: <CompressorImagePage /> },
+    { path: "/image-transform/rotateimage", element: <RotateImagePage /> },
+    { path: "/image-transform/filterimage", element: <FilterImagePage /> },
+    { path: "/image-transform/converttojpg", element: <ConvertToJpgPage /> },
+    { path: "/image-transform/convertfromjpg", element: <ConvertFromJpgPage /> },
+    { path: "/image-transform/resizeimage", element: <ResizeImagePage /> },
+    { path: "/image-transform/cropperimage", element: <CropperImagePage /> }
   ];
 
   return (

@@ -4,34 +4,31 @@ import "./InputNumberComponent.css";
 
 const InputNumberComponent = ({
   value,
-  onValueChange,
+  onValueChanged,
   min,
   max,
   placeholder,
   textColor = "#000",
   disabled = false,
-  additionalAttributes = {},
-  updateOnInput = false
+  additionalAttributes = {}
 }) => {
-  const [inputValue, setInputValue] = useState(value);
 
-  // Handle input change
-  const handleInput = (e) => {
-    const newValue = e.target.value;
+  // Gestion des changements de valeur avec validation numérique
+  const handleInputChange = (e) => {
+    let newValue = e.target.value;
 
-    // Validate numeric input
-    if (newValue === "" || (!isNaN(newValue) && newValue >= min && newValue <= max)) {
-      setInputValue(newValue);
-      if (updateOnInput) {
-        onValueChange(newValue); // Pass the updated value immediately
-      }
+    // Si la valeur est vide, ne pas la traiter
+    if (newValue === "") {
+      newValue = null;
     }
-  };
 
-  // Handle change for deferred updates (on blur or after input completion)
-  const handleChange = () => {
-    if (!updateOnInput) {
-      onValueChange(inputValue); // Pass the final value when the input is done
+    // Assurez-vous que la valeur est un nombre valide
+    if (newValue !== null && (isNaN(newValue) || newValue < min || newValue > max)) {
+      return; // Ne pas accepter la valeur si elle est invalide ou hors des limites
+    }
+
+    if (onValueChanged) {
+      onValueChanged(newValue); // Envoie la nouvelle valeur au parent
     }
   };
 
@@ -39,15 +36,14 @@ const InputNumberComponent = ({
     <div className="ch-number-input">
       <input
         type="number"
-        value={inputValue}
-        onInput={handleInput} // Triggered immediately when value changes
-        onChange={handleChange} // Triggered after change when input is done
+        value={value || ""}
+        onChange={handleInputChange}
         placeholder={placeholder}
         disabled={disabled}
         style={{ color: textColor }}
         min={min}
         max={max}
-        {...additionalAttributes} // Spread additional attributes
+        {...additionalAttributes} // Spread des attributs supplémentaires
         className="ch-input"
       />
     </div>
@@ -56,13 +52,12 @@ const InputNumberComponent = ({
 
 InputNumberComponent.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  onValueChange: PropTypes.func,
+  onValueChanged: PropTypes.func,
   min: PropTypes.number,
   max: PropTypes.number,
   placeholder: PropTypes.string,
   textColor: PropTypes.string,
   disabled: PropTypes.bool,
-  updateOnInput: PropTypes.bool,
   additionalAttributes: PropTypes.object,
 };
 

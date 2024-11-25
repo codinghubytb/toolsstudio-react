@@ -7,6 +7,7 @@ const InputCheckboxComponent = ({
   onValueChanged,
   label = "",
   id,
+  disabled=false,
   textColor = "#000",
   stopPropagation = false,
 }) => {
@@ -31,6 +32,7 @@ const InputCheckboxComponent = ({
         className="ch-checkbox-input"
         checked={value}
         id={id}
+        disabled={disabled}
         onChange={handleChange}
       />
       {label && (
@@ -48,7 +50,7 @@ const InputCheckboxComponent = ({
 
 InputCheckboxComponent.propTypes = {
   value: PropTypes.bool.isRequired, // État de la case à cocher (coché ou non).
-  onValueChanged: PropTypes.func.isRequired, // Fonction de callback pour gérer le changement de valeur.
+  onValueChanged: PropTypes.func, // Fonction de callback pour gérer le changement de valeur.
   label: PropTypes.string, // Texte du label associé.
   textColor: PropTypes.string, // Couleur du texte du label.
   id: PropTypes.string, // ID unique pour l'élément checkbox.

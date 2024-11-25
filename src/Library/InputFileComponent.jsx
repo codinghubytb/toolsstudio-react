@@ -7,7 +7,6 @@ const InputFileComponent = ({
   textColor = "#000",
   onFileChange,
   id,
-  display = "block",
 }) => {
   const [error, setError] = useState("");
   const [isFileSelected, setIsFileSelected] = useState(false);
@@ -30,14 +29,13 @@ const InputFileComponent = ({
 
     // Appeler la fonction de rappel avec le fichier sélectionné
     if (onFileChange) {
-      onFileChange(file);
+      onFileChange(event);
     }
   };
 
   return (
     <label
       htmlFor={id}
-      style={{display: display}}
       className={`ch-drop-container ${isFileSelected ? "ch-file-selected" : ""}`}
     >
       <span className="ch-drop-title" style={{ color: textColor }}>
