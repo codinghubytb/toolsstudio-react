@@ -1,21 +1,16 @@
 # Tools Studio
 
-**Tools Studio** est une plateforme en ligne offrant une variété d'outils pour développeurs et utilisateurs. Accessible depuis [toolsstudio.codinghub.cloud](https://toolsstudio.codinghub.cloud), elle est pensée pour répondre à des besoins courants, tels que :
+**Tools Studio** est une plateforme en ligne qui propose une gamme variée d'outils pour les développeurs et les utilisateurs. Accessible depuis [toolsstudio.codinghub.cloud](https://toolsstudio.codinghub.cloud), elle répond à de nombreux besoins tels que :
 
-- Conversion de données (ex. JSON vers C#).
-- Génération et encodage divers (ex. Base64).
-- Outils pratiques pour le quotidien des développeurs.
-
-## Fonctionnalités principales
-
-1. **Convertisseurs** : Convertissez facilement des formats tels que JSON ou base64.
-2. **Générateurs** : Créez des données fictives ou encodez des chaînes de manière sécurisée.
-3. **Simplicité d’utilisation** : Une interface intuitive et accessible à tous.
+- Conversion de données (par exemple JSON vers C#).
+- Génération et encodage (par exemple Base64).
+- Transformation d'images (recadrage, filigrane, filtres).
+- Outils pratiques pour simplifier les tâches quotidiennes des développeurs.
 
 ## Accéder au site
 
-Rendez-vous sur : [Tools Studio](https://toolsstudio.codinghub.cloud)
+Visitez : [Tools Studio](https://toolsstudio.codinghub.cloud)
 
-## Contribution
+## Contact
 
-Les contributions pour de nouveaux outils ou améliorations sont les bienvenues. Proposez vos idées ou signalez des bugs via notre système de contact.
+Pour toute suggestion ou question, contactez-nous via notre formulaire intégré ou écrivez à **codinghub@gmail.com**.
