@@ -1,8 +1,21 @@
-# React + Vite
+# Tools Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Tools Studio** est une plateforme en ligne offrant une variété d'outils pour développeurs et utilisateurs. Accessible depuis [toolsstudio.codinghub.cloud](https://toolsstudio.codinghub.cloud), elle est pensée pour répondre à des besoins courants, tels que :
 
-Currently, two official plugins are available:
+- Conversion de données (ex. JSON vers C#).
+- Génération et encodage divers (ex. Base64).
+- Outils pratiques pour le quotidien des développeurs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités principales
+
+1. **Convertisseurs** : Convertissez facilement des formats tels que JSON ou base64.
+2. **Générateurs** : Créez des données fictives ou encodez des chaînes de manière sécurisée.
+3. **Simplicité d’utilisation** : Une interface intuitive et accessible à tous.
+
+## Accéder au site
+
+Rendez-vous sur : [Tools Studio](https://toolsstudio.codinghub.cloud)
+
+## Contribution
+
+Les contributions pour de nouveaux outils ou améliorations sont les bienvenues. Proposez vos idées ou signalez des bugs via notre système de contact.
