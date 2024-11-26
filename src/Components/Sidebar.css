@@ -5,9 +5,8 @@
     height: 100%;
     padding: 10px 14px;
     height:  100%;
-    background: var(--sidebar-color);
     transition: all 0.3s ease;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid var(--border);
 }
   
   .sidebar.open {
@@ -21,8 +20,14 @@
 @media (max-width: 768px) {
     .sidebar {
         position: fixed;
-        border-right: 0px;
+        background: var(--sidebar-color);
     }
+
+    .sidebar.open ~ .app-content {
+        opacity: 0.1;
+        transition: opacity 0.3s ease; /* Animation pour rendre l'effet plus fluide */
+    }
+
     .sidebar.close {
         width: 0px;
         padding: 0px;

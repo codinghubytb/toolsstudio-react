@@ -4,7 +4,7 @@
     padding: 20px;
     border-radius: 5px;
     height: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 4px var(--yellow-alpha);
     transition: box-shadow 0.4s;
 }
 

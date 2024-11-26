@@ -67,8 +67,7 @@ const MorseConverterPage = () => {
     <PositionedComponent
       backgroundColor="transparent" 
       positionContent="top-center">
-         <WrapperComponent
-          maxWidth={1100}>
+         <WrapperComponent>
             <div>
                 <TitleComponent
                     text="Morse Converter"

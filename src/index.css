@@ -13,6 +13,10 @@
   --body-color: #fff;
   --sidebar-color: #fff;
   --text-color: #242526;
+  --primary-color-landing: #f3eae5;
+  --yellow-alpha: #feb32b4c;
+  --border: #d5e3ec;
+  --white : #fff;
 }
 
 * {
@@ -32,6 +36,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--body-color);
+  background-position: center center;
+  background-size: cover;
+  background-image: url('back.svg');
 }
 
 h1 {
@@ -44,6 +51,7 @@ body.dark {
   --body-color: #242526;
   --text-color: #fff;
   --sidebar-color: #242526;
+  --border: #454652;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'; // Import du composant Link
 import "./Sidebar.css";
+import SpacerComponent from "../Library/SpacerComponent";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
 
@@ -18,12 +19,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                       <Link to="/" >
                           <i className='bx bx-home icon'></i>
                           <span className="text nav-text">Home</span>
-                      </Link>
-                  </li>
-                  <li className="nav-link">
-                      <Link to=".." >
-                          <i className='bx bx-log-out icon'></i>
-                          <span className="text nav-text">Logout</span>
                       </Link>
                   </li>
               </ul>

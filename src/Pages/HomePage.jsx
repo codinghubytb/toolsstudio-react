@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GridComponent from "../Library/GridComponent";
 import CardComponent from "../Library/CardComponent";
-import TitleComponent from "../Library/TitleComponent";
+import LabelComponent from "../Library/LabelComponent";
 import InputTextComponent from "../Library/InputTextComponent";
 import SpacerComponent from "../Library/SpacerComponent";
 import { useModules } from "../ModuleContext/ModuleProvider";
@@ -43,7 +43,12 @@ const HomePage = () => {
 
   return (
     <div className="tools-page">
-      <h1>Bienvenue ({filteredModules.length})</h1>
+      <SpacerComponent numberSpace={2} />
+      <h1 style={{maxWidth: "900px", fontSize:"45px"}}>Des outils adaptés aux services de vos besoins</h1>
+      <SpacerComponent numberSpace={2} />
+      <p style={{fontSize: 16}}>Tous nos outils sont conçus pour une utilisation optimale et respectueuse de votre confidentialité. <br />
+      Aucune image ni donnée n'est stockée sur nos serveurs.</p>
+      
       <SpacerComponent numberSpace={2} />
 
       <InputTextComponent
@@ -52,7 +57,7 @@ const HomePage = () => {
         backgroundColor="white"
         borderColor="var(--primary-color)"
         textColor="#000"
-        placeholder="Search module..."
+        placeholder="Search Translate Language ..."
       />
 
       <SpacerComponent numberSpace={2} />
@@ -66,7 +71,9 @@ const HomePage = () => {
         columnsSM={1}
         gap={50}
       />
+      <SpacerComponent numberSpace={2}/>
     </div>
+    
   );
 };
 

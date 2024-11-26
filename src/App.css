@@ -9,23 +9,24 @@
 .app-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 1rem;
   height: 100vh;
-  overflow: hidden;
 }
 
-/* Mise en page principale */
+/* Mise en page principale 
 .main-layout {
   overflow: auto;
   display: flex;
-  height: calc(100vh); /* Ajuster pour la navbar */
-}
+  width: 100%;
+}*/
 
-/* Contenu principal */
-.content {
+.app-content {
+  padding: 1rem 0;
+  max-width: 1330px;
+  width: 100%;
   flex: 1;
-  padding: 1rem;
-  background-color: var(--body-color);
+  height: 100%;
   color: var(--text-color);
-  overflow-y: auto;
-  z-index: 999;
+  
 }

@@ -3,7 +3,6 @@ import "./WrapperComponent.css";
 
 const WrapperComponent = ({
   backgroundColor = "#fff",
-  maxWidth = 690,
   paddingInPx = 30,
   isUseBoxShadow = true,
   children
@@ -17,7 +16,7 @@ const WrapperComponent = ({
       className="ch-wrapper"
       style={{
         backgroundColor: backgroundColor,
-        maxWidth: `${maxWidth}px`,
+        maxWidth: "100%",
         padding: `${paddingInPx}px`,
         boxShadow: boxShadow
       }}
