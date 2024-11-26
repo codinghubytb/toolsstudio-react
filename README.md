@@ -1,15 +1,18 @@
-# Tools Studio
+# NoteCluster App
 
-**Tools Studio** is an online platform offering a variety of tools for developers and users. Accessible at [toolsstudio.codinghub.cloud](https://toolsstudio.codinghub.cloud), it is designed to meet common needs such as:
+NoteCluster is an innovative note-taking app designed to enhance productivity and organization. With a user-friendly interface, it allows users to create, manage, and organize their notes and tasks effortlessly.
 
-- Data conversion (e.g., JSON to C#).
-- Generation and encoding (e.g., Base64).
-- Image transformation tools (cropping, resize, filters ...).
-- Practical utilities for simplifying developers' daily tasks.
+## Features
 
-## Access the Site
+- Easy note creation and editing
+- Easy task creation and editing
+- Categories for better organization
+- Search and filter options
 
-Visit: [Tools Studio](https://toolsstudio.codinghub.cloud)
+## Installation
+
+1. Download from [Google Play Store](https://play.google.com/store/apps/details?id=com.codinghub.notecluster).
+2. Install on your device.
 
 ## Contact
 
